@@ -1,0 +1,99 @@
++OK Hello there.
+CAPA
++OK Here's what I can do:
+STLS
+TOP
+USER
+LOGIN-DELAY 10
+PIPELINING
+UIDL
+IMPLEMENTATION Courier Mail Server
+.
+USER redes07
++OK Password required.
+PASS bloqueo
++OK logged in.
+STAT
++OK 14 9452
+LIST
++OK POP3 clients that break here, they violate STD53.
+1 713
+2 732
+3 709
+4 384
+5 752
+6 772
+7 716
+8 714
+9 716
+10 710
+11 710
+12 374
+13 730
+14 720
+.
+UIDL
++OK
+1 1634556252.V803I2009M791469.serveis-rdc
+2 1634556262.V803I200aM64231.serveis-rdc
+3 UID3-1634556467
+4 UID4-1634556467
+5 UID5-1634556467
+6 UID6-1634556467
+7 UID7-1634556467
+8 UID8-1634556467
+9 UID9-1634556467
+10 UID10-1634556467
+11 UID11-1634556467
+12 UID12-1634556467
+13 UID13-1634556467
+14 UID14-1634556467
+.
+RETR 13
++OK 730 octets follow.
+Return-Path: <redes07@redes.upv.es>
+X-Original-To: redes07@redes.upv.es
+Delivered-To: redes07@redes.upv.es
+Received: from [10.236.9.19] (wifialu9-19.wi-fi.upv.es [10.236.9.19])
+	by serveis-rdc (Postfix) with ESMTP id 35ED45F8DA
+	for <redes07@redes.upv.es>; Mon, 18 Oct 2021 19:06:28 +0200 (CEST)
+To: redes07@redes.upv.es
+From: redes07 <redes07@redes.upv.es>
+Subject: Title test
+Message-ID: <d1e26937-17e1-ac0e-8241-4ebac3e167a0@redes.upv.es>
+Date: Mon, 18 Oct 2021 19:06:04 +0000
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101
+ Thunderbird/78.14.0
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Content-Language: en-US
+
+Body test
+
+.
+RETR 14
++OK 720 octets follow.
+Return-Path: <redes07@redes.upv.es>
+X-Original-To: redes07@redes.upv.es
+Delivered-To: redes07@redes.upv.es
+Received: from [10.236.9.19] (wifialu9-19.wi-fi.upv.es [10.236.9.19])
+	by serveis-rdc (Postfix) with ESMTP id DA9975F8DA
+	for <redes07@redes.upv.es>; Mon, 18 Oct 2021 19:07:27 +0200 (CEST)
+To: redes07@redes.upv.es
+From: redes07 <redes07@redes.upv.es>
+Subject: title
+Message-ID: <8057f9a6-1c35-be71-a0e8-8509b712fcc8@redes.upv.es>
+Date: Mon, 18 Oct 2021 19:07:03 +0000
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101
+ Thunderbird/78.14.0
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Content-Language: en-US
+
+body
+
+.
+QUIT
++OK Bye-bye.

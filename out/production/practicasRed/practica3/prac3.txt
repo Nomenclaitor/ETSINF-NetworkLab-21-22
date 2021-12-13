@@ -1,0 +1,56 @@
+
+1.1
+	Es para que envie los caracteres <CR> y <LF> cuando se presiona la tecla enter
+	Porque no saldria los resultados que buscamos, es como el double enter de GET HTTP
+	
+1.2
+	Es el documento HTML de la pagina, un documento que pone hola mundo en el cuerpo y mi primer
+	documento HTMl como titulo, con una imagen del mundo con la siguente frase vamos al siguiente 
+	ejercicio
+	
+2.1
+	Cabecera de Host es obligatorio en 1.1
+2.2
+	Una linea en blanco
+2.3
+	El martes 25 de julio de 2017
+2.4
+	Date es cunado se ha generado esta respuesta y las modified es la ultima vez que se modifico 
+	el objeto que estamos pidiendo
+2.5
+	454 bytes
+
+   * conectar con net cat -> hacer peticion GET -> indicar Host: -> linea en blanco *
+
+3.1
+	El tipo de documento si, pero el contenido es diferente
+3.2
+	Son documentos diferentes para dos paginas diferentes, aunque sean del mismo tipo, el contenido
+	es diferente, en el 1.1 se le ha indicado que queremos conectarnos con zoltar (host) y en 
+	1.0 no
+
+4.1
+	Utiliza HTTP1.1 el servidor tambien esta usando el 1.1
+4.2
+	Prefiere el ingles estadounidense
+4.3
+	10.235.14.92
+4.4
+	Persistente
+4.5
+	g-zip y deflate
+4.6
+	No figuraba porque no habia cabecera transfer encoding, porque el servidor web tenia que 
+	buscar los contenidos y los enviaba en paquetes
+
+5.
+	Datos 1: 44 Requests 2.55MB trsanferred load: 719ms
+	Data 2:	45 requests 2.49MB trasnferred	load: 959ms
+	
+	5.1
+		Si
+	5.2
+		10
+	5.3
+		Preffered language, Accepted encoding, Type of conection, User agent, pues hace lo
+		que dice :)

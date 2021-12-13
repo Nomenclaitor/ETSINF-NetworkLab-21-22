@@ -1,0 +1,36 @@
+220 serveis-rdc ESMTP Postfix (Ubuntu)
+EHLO [10.236.9.19]
+250-serveis-rdc
+250-PIPELINING
+250-SIZE 10240000
+250-VRFY
+250-ETRN
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250 SMTPUTF8
+MAIL FROM:<redes07@redes.upv.es> BODY=8BITMIME SIZE=535
+250 2.1.0 Ok
+RCPT TO:<redes08@redes.upv.es>
+250 2.1.5 Ok
+DATA
+354 End data with <CR><LF>.<CR><LF>
+To: redes08@redes.upv.es
+From: redes07 <redes07@redes.upv.es>
+Subject: AAAAAAAAAAAAAAAAAAAAAAAA
+Message-ID: <cc0f89d9-f6fc-b709-a71c-52e605ce3624@redes.upv.es>
+Date: Mon, 18 Oct 2021 19:01:49 +0000
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101
+ Thunderbird/78.14.0
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Content-Language: en-US
+
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa
+
+.
+250 2.0.0 Ok: queued as 738175F8DA
+QUIT
+221 2.0.0 Bye

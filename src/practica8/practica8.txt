@@ -1,0 +1,35 @@
+-1)
+	a) MSS = 1386 bytes
+	   En segmentos SYN/ACK
+	   Se establecen opciones SACK y escala de ventana
+	   Solo aparece en los segmentos SYN/ACK
+	   
+	b) SN (R) - Sequence number raw = 3572975831
+	
+	c) El cliente inicia el FIN porque el source del primer segmento FIN que aparece en el flujo tiene el IP
+	   del cliente
+	   
+	d) Los datos (GET HTTP) tiene un tamaño de 619 bytes y el MSS de 1386 bytes
+	   Es menor que el MSS y no puede superar ese limite
+	  
+-2)
+	a) Todos los segmentos que se ha producido en la conversacion TCP al acceder a upv.es
+	
+	b) Hay partes que si, cuando los datos son grandes se reconoce varios segmentos en un unico ack
+	   Para aprovechar mejor el ancho de banda disponible y no congestionar la red?
+	   Para evitar confundir al servidor sobre el estado de congestion de la red?
+	
+-3)
+	a) Con un flag de reset (RST)
+	   No le contesta nada, en el caso de Chrome lo vuelve a intentar una vez, Firefox pasa de ello
+	   
+	b) No deberia porque al menos responde con un 404 y envia una pagina GUI del 404
+	
+-4)
+	a) Cada cuatro segmentos hay un ACK
+	   Si porque por cada 4 segmentos, solo hay 1 ACK
+	   229
+	   
+	b) Va escalando cada vez que recibe un ACK correcto
+	
+	c) 43444, esta reconociendo varios a la vez

@@ -1,0 +1,9 @@
+Si se conecta desde una maquina virtual al server puede dar error por:
+    cortafuegos de windows bloqueando la entrada de X puerto asignado (7777 por ejemplo)
+
+    "Solucion":     ver el ip de la maquina virtual con ipconfig
+                    buscar un ip parecido en la cmd con ipconfig y conectarse a ese ip
+
+    "Solcion 2":    editar cortafuegos windows
+
+    IMPORTANTE ACORDARSE DE USAR DIFERENTES PUERTOS PARA CADA SERVERSOCKET

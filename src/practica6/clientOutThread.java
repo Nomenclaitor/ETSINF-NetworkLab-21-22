@@ -27,7 +27,7 @@ public class clientOutThread extends Thread{
             String keyboardIn = keyboard.nextLine();
             while (true) {
                 if (!keyboardIn.equals("quit")) {
-                    socketOut.println("Qiyao: " + keyboardIn);
+                    socketOut.println("User: " + keyboardIn);
                     keyboardIn = keyboard.nextLine();
                 } else {
                     socketOut.println(keyboardIn);

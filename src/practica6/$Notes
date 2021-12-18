@@ -1,0 +1,66 @@
+
+
+Exercise 1:
+    This is computer network not CSD LMAO
+
+Exercise 2:
+    - threadServer1 -
+        The main of the server, uses "clientThread"
+
+        Accepts connection requests in from the port 8000 and creates an "permanent" connection socket with the client
+        and an independent thread making the server concurrent
+
+        - clientThread -
+            Includes all the methods to echo the input from the client
+
+Exercise 3:
+    - threadClient -
+        The main of the client, uses "clientInThread" to listen to the server and uses "clientOutThread" to
+        send data to the server
+
+            - clientInThread -
+                Listens for data from the server until the user types and sends "quit"
+
+            - clientOutThread -
+                Sends the user input to the server until the user types and sends "quit"
+
+-----------------------------------------------------------------------------------------------------
+
+Ejercicio 1:
+    Estamos en redes no CSD lol
+
+Ejercicio 2:
+    - threadServer1 -
+           El main del servidor, utiliza "clientThread"
+
+            Acepta conexiones desde el puerto 8000 y crea un Socket "permanente" para conectar con el cliente y
+            un hilo independiente para la conexion
+
+            - clientThread -
+                Incluye todos los metodos para hacer el echo
+
+Ejercicio 3:
+    - threadClient -
+        El main del cliente, utiliza "clientInThread" para escuhar al server y utiliza "clientOutThread" para
+        enviar datos al servidor
+
+        - clientInThread -
+            Escucha al servidor hasta que el usuario escribe y envia "quit"
+
+        - clientOutThread -
+            Envia al servidor el input del usuario hasta que el usuario escribe y envia "quit"
+
+-----------------------------------------------------------------------------------------------------
+
+Important stuff:
+
+    public void run() {} :
+        Code the thread will execute when the .start() is called
+        Bloque de codigo que ejecuta el hilo cuando se hace la llamada .start()
+
+
+    "nombre hilo".start();
+    "thread name".start();
+        Starts the code within then tun block of the thread
+        Ejecuta el bloque de codigo dentro de run
+

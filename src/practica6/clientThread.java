@@ -9,10 +9,19 @@ import java.io.IOException;
 
 
 public class clientThread extends Thread{
+    // Thread ID to identify one thread from another
     int threadId;
     private Socket clientSocket;
+    // Scanner to receive data from the client
     private Scanner socketIn;
+    // PrintWriter to send data to the client
     private PrintWriter socketOut;
+
+    /**
+     * Method used to create a thread
+     * @param threadId ID to assign to the thread
+     * @param clientSocket  Socket used to connect with the client
+     */
     public clientThread(int threadId, Socket clientSocket) {
         this.threadId = threadId;
         this.clientSocket = clientSocket;
@@ -24,10 +33,15 @@ public class clientThread extends Thread{
         }
     }
 
+    /**
+     * Contains everything the thread will perform
+     */
     public void run() {
         socketOut.println("Echo line: ");
         socketOut.flush();
         String clientInput = socketIn.nextLine();
+        // The server will keep sending echoing the client until the client
+        // sends ./0Exit
         while (!clientInput.equals("./0Exit")) {
             socketOut.println(clientInput);
             socketOut.println("Anything more?");
@@ -42,6 +56,7 @@ public class clientThread extends Thread{
         }
     }
 
+    @Deprecated
     public void echo() {
         String inputString = socketIn.nextLine();
         while(true) {

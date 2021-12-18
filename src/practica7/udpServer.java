@@ -30,6 +30,7 @@ public class udpServer {
         }
     }
 
+    // Optional
     public static String getTime() {
         LocalDateTime dateTime = LocalDateTime.now();
         DateTimeFormatter dTFormatter = DateTimeFormatter.ofPattern("E, dd/MM/yyyy HH:mm:ss");

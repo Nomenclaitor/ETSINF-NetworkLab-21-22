@@ -1,0 +1,93 @@
+
+Exercise 1:
+    - dnsLookUp -
+        Initial arguments (from client):
+            Host name
+
+        Shows the host name and its IP address on the screen, will print the IOException message and the cause
+        if InetAddress.getByName() fails.
+
+Exercise 2:
+    - datagramSocketPort -
+        Creates a UDP type Socket, the port is assigned automatically by the operating system
+
+Exercise 3 - 4:
+    - udpClient -
+        Sends data typed in by the user via UDP protocol using the port 7777
+
+        Receives data from an UDP Socket, listening port: 7777
+
+Exercise 5:
+    - udpServer -
+        Returns the data that has received with a timestamp at the end
+
+-----------------------------------------------------------------------------------------------------
+
+Ejercicio 1:
+    - dnsLookUp -
+        Argumentos de inicio:
+            Nombre del Host
+
+        Imprime por pantalla el nombre del host y su direccion IP, imprimira IOEXception y la causa del error si
+        InetAddress.getByName() falla.
+
+Ejercicio 2:
+    - datagramSocketPort -
+        Crea un socket UDP, la cual el sistema operativo le asigna un puerto de forma automatica
+
+Ejericio 3 - 4:
+    - udpClient -
+        Envia datos introducidos por el teclado usando UDP con socket en el puerto 7777
+
+        Recibe datos desde un Socket UDP con puerto 7777
+
+Ejercicio 5:
+    - udpServer -
+        Envia al cliente el dato recibido con la fecha y hora de recepcion al final
+        Puerto del Socket UDP: 7777
+
+-----------------------------------------------------------------------------------------------------
+
+Cheat codes:
+
+
+                    Process of sending data via UDP / Proceso de envio de datos por UDP:
+
+
+                        String --> Byte[] --> DatagramPacket --> UPDSocket.send()
+
+
+
+    Creating UDP Sockets / Creacion de sockets UDP:
+        DatagramSocket "nombre" = new DatagramSocket("puerto");
+        DatagramSocket "socketName" = new DatagramSocket("portNUmber");
+
+
+    Creating DatagramPackets / Creacion de DatagramPackets:
+        DatagramPacket "nombre" = new DatagramPacket(new byte["tamaño"], "tamaño del array de bytes", "IP address", "port number");
+        DatagramPacket "name" = new DatagramPacket(new byte["size"], "byte array size", "Direccion IP", "numero de puerto");
+
+
+    Getting the IP address from the sender or destination /
+    Extraccion de la direccion IP del origen o destino:
+        InetAddress "name" = "ReceivedDatagramPacketName".getAddress();     Extracts the IP address from an received DatagramPacket
+        InetAddress "name" = InetAddress.getByName("host url");             Extracts the IP address from an URL
+
+
+        InetAddress "nombre" = "nombreDatagramPacket recibido".getAddress();    Extrae la direccion IP de un DatagramPacket recibido
+        InetAddress "nombre" = InetAddress.getByName("url host");               Extrae la direccion IP de un URL
+
+
+    Sending DatagramPackets / Envio de DatagramPackets:
+        "UDPSocket name".send("DatagramPacket name");
+        "Nombre SocketUDP".send("Nombre DatagramPacket");
+
+
+    Reception of DatagramPackets / Recepcion de DatagramPackets:
+        "UDPSocket name".receive("DatagramPacket name to assign");
+        "Nombre SocketUDP".receive("Nombre DatagramPacket a asignar");
+
+
+    DatagramPacket --> String
+        String "String name" = new String("DatagramPacket name".getData(), 0, "DatagramPacket name".length());
+        String "Nombre String" = new String("Nombre DatagramPacket".getData(), 0, "Nommbre DatagramPacket".length());

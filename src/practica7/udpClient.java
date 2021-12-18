@@ -11,20 +11,32 @@ public class udpClient {
             Scanner keyboard = new Scanner(System.in);
 
             // Send data
-            DatagramSocket clientSocket = new DatagramSocket();
+            // Creation of UDP Socket with port number: 7777
+            DatagramSocket clientSocket = new DatagramSocket(7777);
+
+            // Gets the IP address of the PC
             InetAddress dir = InetAddress.getByName("localHost");
             String outString = keyboard.nextLine();
-            byte[] buffer = new byte[512];
-            buffer = outString.getBytes(StandardCharsets.UTF_8);
+
+            // Creation and value assignment of the buffer which will be sent
+            // using "clientSocket"
+            byte[] buffer = outString.getBytes(StandardCharsets.UTF_8);
+
+            // Converts "buffer" int a UDP datagram
             DatagramPacket packet = new DatagramPacket(buffer, buffer.length, dir, 7777);
             clientSocket.send(packet);
 
 
             // Receive data
             //Ej4
+            // Reception of data
             clientSocket.receive(packet);
+
+            // Converts the Datagram (packet) into a String
             String answer = new String (packet.getData(), 0, packet.getLength());
             System.out.println(answer);
+
+            // CLoses the UDP Socket
             clientSocket.close();
         } catch (SocketException e) {
             System.out.println(e.getMessage() + " " + e.getCause());

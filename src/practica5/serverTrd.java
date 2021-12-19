@@ -17,6 +17,7 @@ public class serverTrd {
                 Scanner clientSocketIn = new Scanner(connectionSocket.getInputStream());
                 PrintWriter clientSocketOut = new PrintWriter(connectionSocket.getOutputStream());
 
+                // Sending HTTP status and initial header
                 clientSocketOut.println("HTTP/1.0 200 ok");
                 clientSocketOut.println("Content-Type: text/plain\r\n");
                 clientSocketOut.flush();

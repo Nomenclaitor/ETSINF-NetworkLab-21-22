@@ -1,0 +1,62 @@
+
+Exercise 1:
+    - serverFst -
+        Listens for incoming data and sends the received data back as a echo and closes the connection socket afterwards
+
+Exercise 2:
+    - serverSnd -
+        Performs just like "serverFst" but also sends the IP address of the beacon Socket and the connection Socket and
+        the port of the beacon Socket and the connection Socket to the client
+
+Exercise 3:
+    - serverTrd -
+        Returns to the client the HTTP control information the server receives from the client
+
+-----------------------------------------------------------------------------------------------------
+
+Ejercicio 1:
+    - serverFst -
+        Devuelve al cliente lo que el cliente le ha enviado al servidor como si fuese una funcion echo y luego cierra la conexion
+
+Ejercicio 2:
+    - serverSnd -
+        Exactamente lo que hace ejercicio 1 pero tambien envia al cliente la direccion IP del servidor y del cliente y el puerto
+        del servidor y el cliente
+
+Ejercicio 3:
+    - serverTrd -
+        Devuelve al cliente conectado (navegador) la informacion de control HTTP que envia al servidor
+
+-----------------------------------------------------------------------------------------------------
+
+Basics:
+
+                                        How an server works:
+
+            Client                  Server creates                      Data transfer                       Data transfer
+         connects to    --->    a new Socket to connect     --->    between server and client   --->     Socket closes at the
+         ServerSocket               with the client                   via the new Socket                 end of the dialogue
+
+
+                                    Como funciona un servidor:
+
+          Cliente se                Servidor crea                       Transferencia de                      Cierre del
+          conecta al    --->     un nuevo Socket para       --->     datos entre servidor y     --->    Socket de transferencia
+         ServerSocket           conectar con el cliente                     cliente                     al finalizar el dialogo
+
+
+    Creating ServerSockets / Creacion de ServerSockets:
+        ServerSocket "ServerSocket name" = new ServerSocket("port number");
+        ServerSocket "nombre ServerSocket" = new ServerSocket("numero de puerto");
+
+    Creating data transfer Sockets / Creacion de Sockets de transferencia de datos:
+        Socket "Socket name" = "ServerSocket name".accept();
+        Socket "Nombre del socket" = "ServerSocket".accept();
+
+    Creating incomming data Scanner / Creacion de Scanner para datos de entrada:
+        Scanner "Scanner name" = new Scanner("Socket name".getInputStream());
+        Scanner "nombre Scanner" = new Scanner("nombre Socket".getInputStream());
+
+    Creating PrintWriters to send data / Creacion de PrintWriter para enviar datos
+        PrintWriter "PrintWriter name" = new PrintWriter("Socket name".getOutputStream());
+        PrintWriter "nombre PrintWriter" = new PrintWriter("Nombre Socket".getOutputStream());
